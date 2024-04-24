@@ -27,11 +27,14 @@ class PrepareBaseModel:
         if freeze_all:
             for layer in model.layers:
                 model.trainable = False
+        #only freeze_till layers are frozen
+        # rest of the layers weights are updated
         elif(freeze_till is not None) and (freeze_till >0):
             for layer in model.layers[:-freeze_till]:
                 model.trainable = False
         
         flatten_in = tf.keras.layers.Flatten()(model.output)
+        # we are using custom dense layer 
         prediction = tf.keras.layers.Dense(
             units=classes,
             activation="softmax"
@@ -41,7 +44,7 @@ class PrepareBaseModel:
             inputs = model.input,
             outputs = prediction
         )
-
+        #we are using optimizer that needs learning rate
         full_model.compile(
             optimizer=tf.keras.optimizers.SGD(learning_rate=learning_rate),
             loss = tf.keras.losses.CategoricalCrossentropy(),
