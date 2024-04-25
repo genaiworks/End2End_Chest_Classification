@@ -29,3 +29,4 @@ export MLFLOW_TRACKING_PASSWORD=ec34733c1df0a2704cccff33c8adf2070636133f
 
 Run Using
 dvc repro 
+dvc dag
