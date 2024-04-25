@@ -13,3 +13,17 @@
 
 MLFlow
 
+DagsHub Credentials
+MLFLOW_TRACKING_URI=https://dagshub.com/genaiworks/End2End_Chest_Classification.mlflow \
+MLFLOW_TRACKING_USERNAME=genaiworks \
+MLFLOW_TRACKING_PASSWORD=ec34733c1df0a2704cccff33c8adf2070636133f \
+python script.py
+
+os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/genaiworks/End2End_Chest_Classification.mlflow"
+os.environ["MLFLOW_TRACKING_USERNAME"]="genaiworks" 
+os.environ["MLFLOW_TRACKING_PASSWORD"]="ec34733c1df0a2704cccff33c8adf2070636133f"
+
+export MLFLOW_TRACKING_URI=https://dagshub.com/genaiworks/End2End_Chest_Classification.mlflow 
+export MLFLOW_TRACKING_USERNAME=genaiworks 
+export MLFLOW_TRACKING_PASSWORD=ec34733c1df0a2704cccff33c8adf2070636133f
+
