@@ -27,3 +27,5 @@ export MLFLOW_TRACKING_URI=https://dagshub.com/genaiworks/End2End_Chest_Classifi
 export MLFLOW_TRACKING_USERNAME=genaiworks 
 export MLFLOW_TRACKING_PASSWORD=ec34733c1df0a2704cccff33c8adf2070636133f
 
+Run Using
+dvc repro 
