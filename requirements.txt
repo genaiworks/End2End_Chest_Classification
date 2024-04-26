@@ -16,4 +16,7 @@ types-PyYAML
 scipy
 Flask
 Flask-Cors
+openai
+streamlit
+python-dotenv
 -e .
